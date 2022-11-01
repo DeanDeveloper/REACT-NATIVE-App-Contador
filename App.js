@@ -24,7 +24,7 @@ export default function App() {
       <Text style={styles.numberCount}>{count}</Text>
 
       <View style={styles.buttonContent}>
-        { (count <= 0) ? ("") : ( <TouchableOpacity style={styles.touchButton} onPress={ decrement }><Text style={styles.textButton}>Descrementar (-)</Text></TouchableOpacity> ) } 
+        { (count <= 0) ? ("") : ( <TouchableOpacity style={styles.touchButton} onPress={ decrement }><Text style={styles.textButton}>Decrementar (-)</Text></TouchableOpacity> ) } 
         <TouchableOpacity style={styles.touchButton} onPress={ increment }><Text style={styles.textButton}>Incrementar (+)</Text></TouchableOpacity>
       </View>
 
