@@ -24,11 +24,11 @@ export default function App() {
       <Text style={styles.numberCount}>{count}</Text>
 
       <View style={styles.buttonContent}>
-        { (count <= 0) ? ("") : ( <TouchableOpacity style={styles.touchButton} onPress={ decrement }><Text style={styles.textButton}>Decrementar (-)</Text></TouchableOpacity> ) } 
+        <TouchableOpacity style={styles.touchButton} onPress={ decrement }><Text style={styles.textButton}>Decrementar (-)</Text></TouchableOpacity>
         <TouchableOpacity style={styles.touchButton} onPress={ increment }><Text style={styles.textButton}>Incrementar (+)</Text></TouchableOpacity>
       </View>
 
-      <TouchableOpacity style={styles.resetButton} onPress={ () => setCount(0) } ><Text style={styles.textReset}>Resetar Contagem</Text></TouchableOpacity>
+      {count == 0 ? "" : (<TouchableOpacity style={styles.resetButton} onPress={ () => setCount(0) } ><Text style={styles.textReset}>Resetar Contagem</Text></TouchableOpacity>) }
 
     </View>
   );
@@ -67,7 +67,8 @@ const styles = StyleSheet.create({
     borderWidth: .4,
     borderColor: 'red',
     borderRadius: 4,
-    padding: 10
+    padding: 10,
+    marginTop: 20
   },
 
   textReset: {
