@@ -28,7 +28,7 @@ export default function App() {
         <TouchableOpacity style={styles.touchButton} onPress={ increment }><Text style={styles.textButton}>Incrementar (+)</Text></TouchableOpacity>
       </View>
 
-      <TouchableOpacity style={styles.resetButton}><Text style={styles.textReset}>Resetar Contagem</Text></TouchableOpacity>
+      <TouchableOpacity style={styles.resetButton} onPress={ () => setCount(0) } ><Text style={styles.textReset}>Resetar Contagem</Text></TouchableOpacity>
 
     </View>
   );
