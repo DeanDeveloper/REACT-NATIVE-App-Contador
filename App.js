@@ -28,6 +28,8 @@ export default function App() {
         <TouchableOpacity style={styles.touchButton} onPress={ increment }><Text style={styles.textButton}>Incrementar (+)</Text></TouchableOpacity>
       </View>
 
+      <TouchableOpacity style={styles.resetButton}><Text style={styles.textReset}>Resetar Contagem</Text></TouchableOpacity>
+
     </View>
   );
 }
@@ -58,6 +60,19 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     borderColor: '#8800ff',
     marginHorizontal: 10
+  },
+
+  resetButton : {
+    width: '90%',
+    borderWidth: .4,
+    borderColor: 'red',
+    borderRadius: 4,
+    padding: 10
+  },
+
+  textReset: {
+    color: 'red',
+    textAlign: 'center'
   },
 
   textButton: {
